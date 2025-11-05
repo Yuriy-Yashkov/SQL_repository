@@ -1,0 +1,76 @@
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+    <persistence-unit name="march8arm-postgresql" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jar-file>./lib/mr-entities-1.0.jar</jar-file>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://postgres-server:5432/march"/>
+            <property name="javax.persistence.jdbc.user" value="client"/>
+            <property name="javax.persistence.jdbc.password" value="march8"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="current_session_context_class" value="thread"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="march8arm-sqlserver" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jar-file>./lib/mr-entities-1.0.jar</jar-file>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:jtds:sqlserver://sql-server;databaseName=global"/>
+            <property name="javax.persistence.jdbc.user" value="ayankov"/>
+            <property name="javax.persistence.jdbc.password" value="a5548"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider"/>
+            <property name="hibernate.c3p0.acquire_increment" value="1"/>
+            <property name="hibernate.c3p0.idle_test_period" value="3000"/>
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="50"/>
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+            <property name="hibernate.c3p0.timeout" value="50"/>
+            <property name="hibernate.c3p0.acquireRetryAttempts" value="1"/>
+            <property name="hibernate.c3p0.acquireRetryDelay" value="250"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="march8arm-sqlserver-march8" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jar-file>./lib/mr-entities-1.0.jar</jar-file>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://mssql-server;databaseName=Gomel"/>
+            <property name="javax.persistence.jdbc.user" value="march8"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.cache.use_query_cache" value="false"/>
+            <property name="cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+            <property name="connection.provider_class" value="org.hibernate.connection.C3P0ConnectionProvider"/>
+            <property name="hibernate.c3p0.acquire_increment" value="1"/>
+            <property name="hibernate.c3p0.idle_test_period" value="30000"/>
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="10"/>
+            <property name="hibernate.c3p0.max_statements" value="10"/>
+            <property name="hibernate.c3p0.timeout" value="50"/>
+            <property name="hibernate.c3p0.acquireRetryAttempts" value="1"/>
+            <property name="hibernate.c3p0.acquireRetryDelay" value="250"/>
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" dir="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>$TITLE_TEXT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <link rel="icon" href="css/favicon.jpg" type="image/x-icon">
+</head>
+
+<body>
+<div class="block-menu">
+    <table>
+        <tr>
+            <td>
+                <nav>
+                    <ul class="topmenu">
+                        <li><a href="#42">Верхний трикотаж</a>
+                            <ul class="submenu">
+                                <li><a href="#421">Мужской ассортимент</a></li>
+                                <li><a href="#422">Женский ассортимент</a></li>
+                                <li><a href="#423">Детский ассортимент</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#41">Белье</a>
+                            <ul class="submenu">
+                                <li><a href="#411">Мужской ассортимент</a></li>
+                                <li><a href="#412">Женский ассортимент</a></li>
+                                <li><a href="#413">Детский ассортимент</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#43">Чулочно-носочные изделия</a>
+                            <ul class="submenu">
+                                <li><a href="#431">Мужской ассортимент</a></li>
+                                <li><a href="#432">Женский ассортимент</a></li>
+                                <li><a href="#433">Детский ассортимент</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+            </td>
+            <td>
+                <div class="show-order" onclick="show_order_form(this)">
+                    <span id="order_amount_counter">0</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--BLOCK_CONTENT_TOP-->
+<div class="block-content content-top">
+    <h3 catalog-date="$CATALOG_DATE" catalog-id="$CATALOG_ID" catalog-number="$CATALOG_NUMBER" id="catalog-information"
+        currency-id="$CURRENCY_ID" currency-date="$CURRENCY_DATE" currency-rate="$CURRENCY_RATE">$CATALOG_INFORMATION</h3>
+</div>
+<!--/BLOCK_CONTENT_TOP-->
+
+<!--BLOCK_ANCHOR-->
+<div class="block-content content-anchor">
+    <!--BLOCK_ANCHOR_CONTENT-->
+    <a class="anchor-marker" name="$ANCHOR_ID"></a>$ANCHOR_TEXT
+    <!--/BLOCK_ANCHOR_CONTENT-->
+</div>
+<!--/BLOCK_ANCHOR-->
+
+<!--BLOCK_CONTENT_CENTER-->
+<div class="block-content content-center " id="$PRODUCT_ID" model="$MODEL_NAME" article="$ARTICLE_NAME">
+    <div class="form-header">
+        <div class="form-header-left">
+            $FORM_HEADER_TEXT
+        </div>
+        <div class="form-header-right">
+            <a class="anchor-marker-model" name="$PRODUCT_ID"></a>
+            <span><!--&times;-->&#8226;</span>
+        </div>
+    </div>
+    <div class="form-center">
+        <div class="model-content">
+            <table class="table-model">
+                <tr>
+                    <td class="image-photo">
+                        <a href="$PRODUCT_MAIN_PHOTO" class="thickbox" data-lightbox="image-$PRODUCT_ID" data-title="Главное изображение">
+                            <img class="image-main" src="$PRODUCT_MAIN_PHOTO" alt=""></a>
+                    </td>
+                    <td rowspan="2" class="table-column-sizes">
+                        <div class="model-information">
+                            <div class="line"></div>
+                            <ul><!--BLOCK_PRODUCT_INFORMATION-->
+                                <li>$PRODUCT_INFORMATION</li><!--/BLOCK_PRODUCT_INFORMATION--></ul>
+                            <div class="line"></div>
+                            <div class=color-list><!--BLOCK_PRODUCT_COLORS-->
+                                <div class="color-box" title="$PRODUCT_COLOR_TEXT" id="$PRODUCT_COLOR_ID" tabIndex="-1"></div>
+                                <!--/BLOCK_PRODUCT_COLORS--></div>
+                            <div class="line"></div>
+                            <div class="sizes-list"><!--BLOCK_PRODUCT_SIZES-->
+                                <div class="size-item" id="$PRODUCT_SIZE_ID" model="$PRODUCT_MODEL_ID" colors="$PRODUCT_COLORS">
+                                    <a class="size-label">$PRODUCT_SIZE_TEXT</a>
+                                    <!--BLOCK_PRODUCT_OLD_PRICE--><span class="old-price">$OLD_PRICE_VALUE</span>
+                                    <!--/BLOCK_PRODUCT_OLD_PRICE-->
+                                    <!--BLOCK_PRODUCT_PRICE--><span class="price">$PRICE_VALUE</span>
+                                    <!--/BLOCK_PRODUCT_PRICE-->
+                                </div><!--/BLOCK_PRODUCT_SIZES-->
+                            </div>
+                         </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-image-preview">
+                        <!--BLOCK_PRODUCT_PHOTOS-->
+                        <a href="$PRODUCT_PHOTO" class="thickbox" data-lightbox="image-$PRODUCT_ID" data-title="$PRODUCT_IMAGE_TEXT">
+                            <img class="image-preview" src="$PRODUCT_PHOTO" alt="" title="$PRODUCT_IMAGE_TEXT"></a>
+                        <!--/BLOCK_PRODUCT_PHOTOS-->
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="form-footer">
+        <div class="form-footer-left">
+            <!--BLOCK_ANCHOR_LINK-->
+            <a href="#$ANCHOR_LINK_ID">$ANCHOR_LINK_TEXT</a>
+            <!--/BLOCK_ANCHOR_LINK-->
+        </div>
+        <div class="form-footer-right">OAO 8 Марта</div>
+    </div>
+</div>
+<!--/BLOCK_CONTENT_CENTER-->
+
+<!--BLOCK_CONTENT_BOTTOM-->
+<div class="block-content content-bottom">
+
+</div>
+<!--/BLOCK_CONTENT_BOTTOM-->
+
+<div id="add_to_order_form" class="modal">
+    <div class="modal-content block-content content-center">
+        <div class="form-header">
+            <div class="form-header-left" id="pre-order-title">
+                $FORM_HEADER_TEXT
+            </div>
+            <div class="form-header-right">
+                <span class="close" id="close_add_to_order_form">&times;</span>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="block-order">
+                <div class="order-line">
+                    <div class="order-line-text">Цвет</div>
+                    <div class="order-color-container order-line-controls">
+                        <div class=color-list>
+                            <div class="color-box" title="ДЖИНС" id="clr-jeans" tabindex="-1"></div>
+                            <div class="color-box" title="ЧЕРНЫЙ" id="clr-black" tabindex="-1"></div>
+                            <div class="color-box" title="СЕРЫЙ" id="clr-gray" tabindex="-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="order-line">
+                    <div  class="order-line-text">Количество</div>
+                    <div class="order-line-controls"><input class="ui_amount" id="order_amount" pattern="[0-9]" type="text" size="1" width="4"
+                                                            value="1"></div>
+                </div>
+                <div class="line"></div>
+                <div class="order-line">
+                    <div>
+                        <button class="button" onclick="add_to_order()">Добавить в заявку</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-footer">
+            <div class="form-footer-left">
+            </div>
+            <div class="form-footer-right">OAO 8 Марта</div>
+        </div>
+    </div>
+</div>
+
+<div id="order_form" class="modal">
+    <div class="modal-content  block-content content-center" style="width: 800px">
+        <div class="form-header">
+            <div class="form-header-left" id="order-title">
+                Предварительный заказ продукции
+            </div>
+            <div class="form-header-right">
+                <span class="close" id="close_order_form">&times;</span>
+            </div>
+        </div>
+        <div class="modal-body" id="order_form_body">
+            <div id="order_table" class = "order-content">
+
+            </div>
+            <div class="order-line">
+                <input id="create" class="button" type="submit" value="Создать заявку" onclick="saveOrder()">
+            </div>
+        </div>
+        <div class="form-footer">
+            <div class="form-footer-left">
+            </div>
+            <div class="form-footer-right">OAO 8 Марта</div>
+        </div>
+    </div>
+</div>
+
+<div class="block-footer">
+    <font class="copy_adr">ОАО "8 Марта", 246708, г.
+        Гомель, Беларусь, ул. Советская 41, E-mail: <a href="mailto:info@8marta.com"><font class="copy_adr">info@8marta.com</font></a></font>
+</div>
+<script src="css/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+<script async src="css/script.js" type="text/javascript"></script>
+<script type="text/javascript">
+    lightbox.option({
+        'alwaysShowNavOnTouchDevices': true
+    })
+</script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+version: '3.8'
+
+
+#services:
+#  mssql:
+#    image: mcr.microsoft.com/mssql/server/windows/developer:2019
+#    container_name: mssql-win
+#    environment:
+#      SA_PASSWORD: "jcVH9Uih"
+#      ACCEPT_EULA: "Y"
+#    ports:
+#      - "1433:1433"
+#    volumes:
+#      - mssql_data_gomel:C:\var\opt\mssql
+#    isolation: process
+#    networks:
+#      - mssql_network
+#
+#volumes:
+#  mssql_data_gomel:
+#
+#networks:
+#  mssql_network:
+#    driver: nat
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: MyRepots_posgreSQL
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: march
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+#  postgres2:
+#    image: postgres:16-alpine
+#    container_name: MyRepots_posgreSQL_2
+#    environment:
+#      POSTGRES_USER: user2
+#      POSTGRES_PASSWORD: pass2
+#      POSTGRES_DB: postgres2
+#    ports:
+#      - "5433:5432"  # Обрати внимание — слева локальный порт (уникальный!), справа — порт в контейнере (5432)
+#    volumes:
+#      - postgres_data_2:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+#  postgres_data_2:

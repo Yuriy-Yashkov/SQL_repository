@@ -1,0 +1,297 @@
+.image {
+    overflow: hidden;
+    width: 380px;
+    height: 250px;
+}
+
+.image img {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+}
+
+.image img:hover {
+    -webkit-transform: scale(2.1);
+    -moz-transform: scale(2.1);
+    -o-transform: scale(2.1);
+}
+
+body {
+    background: #c7b39b url(bg.jpg); /* Цвет фона и путь к файлу */
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    width: 1024px;
+    background-color: #d9d9d9;
+}
+
+.b_brend {
+    background: url(b_brend.jpg) repeat-x right;
+}
+
+.top_brends {
+    font-size: 17px;
+    font-family: "Trebuchet MS", serif;
+    color: #143f6e;
+}
+
+.model_name {
+    font-size: 20px;
+    font-family: "Trebuchet MS", serif;
+    color: #143f6e;
+}
+
+.copy_b {
+    background: url(copy_b.jpg) repeat-x;
+}
+
+.copy_adr {
+    font-size: 10px;
+    font-family: "Arial", serif;
+    color: #655a47;
+}
+
+.b_menu {
+    background: url(b_menu.jpg) no-repeat left;
+}
+
+.top_line {
+    background: url(top_line.jpg) repeat-x;
+}
+
+.url_go {
+    text-decoration: none;
+    color: #143f6e;
+    font-size: 14px;
+    font-family: "Arial", serif;
+    font-weight: bold;
+}
+
+A:link {
+    text-decoration: none;
+    color: #143f6e;
+    font-size: 14px;
+    font-family: "Arial", serif;
+}
+
+.kat_left {
+    background: url(kat_left.jpg) no-repeat;
+}
+
+.kat_center {
+    background: url(kat_center.jpg) repeat-x;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Trebuchet MS", serif;
+    font-weight: bold;
+}
+
+.kat_right {
+    background: url(kat_right.jpg) no-repeat;
+}
+
+.b_kategorii {
+    background: url(b_kategorii.jpg) repeat-x bottom;
+}
+
+.mod_name {
+    font-size: 12px;
+    font-family: "Trebuchet MS", serif;
+    color: #000000;
+    font-weight: bold;
+}
+
+.mod_number {
+    font-size: 12px;
+    font-family: "Verdana", serif;
+    color: #000000;
+    font-weight: bold;
+}
+
+.mod_mod {
+    font-size: 8px;
+    font-family: "Verdana", serif;
+    color: #a49d8f;
+}
+
+.money_top {
+    font-size: 10px;
+    font-family: "Verdana", serif;
+    color: #000000;
+}
+
+.money_bottom {
+    font-size: 12px;
+    font-family: "Verdana", serif;
+    color: #000000;
+    font-weight: bold;
+}
+
+.mod_nds {
+    font-size: 9px;
+    font-family: "Verdana", serif;
+    color: #a49d8f;
+}
+
+.price_label {
+    font-size: 12px;
+    font-family: "Verdana", serif;
+    color: #143f6e;
+}
+
+.price_label:link {
+    text-decoration: none;
+    color: #143f6e;
+    font-size: 10px;
+    font-family: "Verdana", serif;
+}
+
+img.resize {
+    width: 165px; /* you can use % */
+    height: auto;
+}
+
+.my-image {
+    width: auto;
+    height: 220px;
+
+    /*    transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        -webkit-transform: scale(0.5, 0.5);*/
+}
+
+.my-image-thumb {
+    width: auto;
+    height: 80px;
+
+    /*    transform: scale(0.5, 0.5);
+        -ms-transform: scale(0.5, 0.5);
+        -webkit-transform: scale(0.5, 0.5);*/
+}
+
+
+#borderimg {
+    border: 10px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url(border_work.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(border_work.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(border_work.png) 30 round;
+}
+
+.borderimage {
+    border: 2px solid transparent;
+    background-color: white;
+    padding: 1px;
+    -webkit-border-image: url(border_small.png) 1 round; /* Safari 3.1-5 */
+    -o-border-image: url(border_small.png) 1 round; /* Opera 11-12.1 */
+    border-image: url(border_small.png) 1 round;
+}
+
+.specification-table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif, serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.order-table-row {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif, serif;
+    font-size: 11px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.order-table-header {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif, serif;
+    font-size: 11px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.specification-table th, .specification-table td:first-child {
+    background: #FEDBB3;
+    color: #143f6e;
+    padding: 1px 1px;
+}
+
+.specification-table th, .specification-table td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: #FFEBC7;
+    color: #143f6e;
+}
+
+.specification-table td {
+    background: #f3dea9;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 200px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #c7b39b;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #c7b39b;
+    color: white;
+}

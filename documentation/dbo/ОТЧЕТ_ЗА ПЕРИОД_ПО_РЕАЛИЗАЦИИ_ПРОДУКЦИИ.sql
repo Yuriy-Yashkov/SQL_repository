@@ -1,0 +1,13 @@
+select SUBSTRING(CONVERT(varchar(10), CL.ARTICLE_CODE),1,3) AS CATEGORY, NSI_CATEGORY.NAME,  sum(ot2.kol  * ot2.kol_in_upack) AS AMOUNT , sum(ot2.itogo) AS ITOGO
+
+from otgruz1 as ot1
+LEFT JOIN otgruz2 ot2 on ot2.doc_id = ot1.item_id 
+LEFT JOIN VIEW_NSI_CLASSIFIER as CL ON CL.ITEM_ID = ot2.kod_izd
+LEFT JOIN NSI_CATEGORY on NSI_CATEGORY.CODE = SUBSTRING(CONVERT(varchar(10), CL.ARTICLE_CODE),1,3)
+
+WHERE ot1.[date] BETWEEN CONVERT(DATETIME, '2019-01-01', 102) and CONVERT(DATETIME, '2019-12-31', 102) 
+and ot1.status = 0 
+and (ot1.operac='Отгрузка покупателю' OR operac='Отгрузка материала'OR operac='Перемещение в розницу')and export=0
+
+GROUP BY SUBSTRING(CONVERT(varchar(10), CL.ARTICLE_CODE),1,3),NSI_CATEGORY.NAME
+ORDER BY SUBSTRING(CONVERT(varchar(10), CL.ARTICLE_CODE),1,3)

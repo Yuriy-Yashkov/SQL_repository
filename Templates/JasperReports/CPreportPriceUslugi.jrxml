@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportPriceCen" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dd7d1062-ba26-48f6-b52d-facbbca28279">
+	<property name="ireport.zoom" value="1.3636363636363662"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="zam" class="java.lang.String"/>
+	<parameter name="number" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="prim" class="java.lang.String"/>
+	<parameter name="zam_post" class="java.lang.String"/>
+	<parameter name="empty" class="java.lang.String"/>
+	<parameter name="director_post" class="java.lang.String"/>
+	<parameter name="director" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT *  FROM "C1_Cen"]]>
+	</queryString>
+	<field name="NIZ" class="java.lang.String"/>
+	<field name="FAS" class="java.lang.Integer"/>
+	<field name="NAR" class="java.lang.String"/>
+	<field name="POL" class="java.lang.String"/>
+	<field name="RZMN" class="java.lang.String"/>
+	<field name="RZMK" class="java.lang.String"/>
+	<field name="DAT" class="java.lang.String"/>
+	<field name="VID" class="java.lang.Integer"/>
+	<field name="GRUP" class="java.lang.Integer"/>
+	<field name="PTK" class="java.lang.String"/>
+	<field name="VZD" class="java.lang.String"/>
+	<field name="SM" class="java.lang.Double"/>
+	<field name="TE" class="java.lang.Double"/>
+	<field name="VM" class="java.lang.Double"/>
+	<field name="MZV" class="java.lang.Double"/>
+	<field name="ZP" class="java.lang.Double"/>
+	<field name="SS" class="java.lang.Double"/>
+	<field name="AM" class="java.lang.Double"/>
+	<field name="FZ" class="java.lang.Double"/>
+	<field name="OBS" class="java.lang.Double"/>
+	<field name="OTH" class="java.lang.Double"/>
+	<field name="CC" class="java.lang.Double"/>
+	<field name="INV" class="java.lang.Double"/>
+	<field name="PRB" class="java.lang.Double"/>
+	<field name="CNO" class="java.lang.Double"/>
+	<field name="CNO2" class="java.lang.Double"/>
+	<field name="FST" class="java.lang.Double"/>
+	<field name="ORF" class="java.lang.Double"/>
+	<field name="CNV" class="java.lang.Double"/>
+	<field name="CNV2" class="java.lang.Double"/>
+	<field name="CNR" class="java.lang.Double"/>
+	<field name="CNR2" class="java.lang.Double"/>
+	<field name="NSR1" class="java.lang.String"/>
+	<field name="WSR1" class="java.lang.Double"/>
+	<field name="CSR1" class="java.lang.Double"/>
+	<field name="NSR2" class="java.lang.String"/>
+	<field name="WSR2" class="java.lang.Double"/>
+	<field name="CSR2" class="java.lang.Double"/>
+	<field name="NSR3" class="java.lang.String"/>
+	<field name="WSR3" class="java.lang.Double"/>
+	<field name="CSR3" class="java.lang.Double"/>
+	<field name="NSR4" class="java.lang.String"/>
+	<field name="WSR4" class="java.lang.Double"/>
+	<field name="CSR4" class="java.lang.Double"/>
+	<field name="NSR5" class="java.lang.String"/>
+	<field name="WSR5" class="java.lang.Double"/>
+	<field name="CSR5" class="java.lang.Double"/>
+	<field name="NSR6" class="java.lang.String"/>
+	<field name="WSR6" class="java.lang.Double"/>
+	<field name="CSR6" class="java.lang.Double"/>
+	<field name="NSR7" class="java.lang.String"/>
+	<field name="WSR7" class="java.lang.Double"/>
+	<field name="CSR7" class="java.lang.Double"/>
+	<field name="NSR8" class="java.lang.String"/>
+	<field name="WSR8" class="java.lang.Double"/>
+	<field name="CSR8" class="java.lang.Double"/>
+	<field name="NSR9" class="java.lang.String"/>
+	<field name="WSR9" class="java.lang.Double"/>
+	<field name="CSR9" class="java.lang.Double"/>
+	<field name="TEN" class="java.lang.Double"/>
+	<field name="TES" class="java.lang.Double"/>
+	<field name="VMS" class="java.lang.Double"/>
+	<field name="VMP" class="java.lang.Double"/>
+	<field name="ZPS" class="java.lang.Double"/>
+	<field name="SNP" class="java.lang.Double"/>
+	<field name="PRRP" class="java.lang.Double"/>
+	<field name="HZRP" class="java.lang.Double"/>
+	<field name="KMRP" class="java.lang.Double"/>
+	<field name="OTHP" class="java.lang.Double"/>
+	<field name="INVP" class="java.lang.Double"/>
+	<field name="PRBP" class="java.lang.Double"/>
+	<field name="FSTP" class="java.lang.Double"/>
+	<field name="ORFP" class="java.lang.Double"/>
+	<field name="CNVP" class="java.lang.Double"/>
+	<field name="TEK" class="java.lang.Double"/>
+	<field name="VMK" class="java.lang.Double"/>
+	<field name="ZPK" class="java.lang.Double"/>
+	<field name="FRAS" class="java.lang.Integer"/>
+	<field name="CDAT" class="java.lang.String"/>
+	<field name="SMTP" class="java.lang.Double"/>
+	<field name="SMTS" class="java.lang.Double"/>
+	<field name="SMVP" class="java.lang.Double"/>
+	<field name="SMVS" class="java.lang.Double"/>
+	<field name="VMTP" class="java.lang.Double"/>
+	<field name="VMTS" class="java.lang.Double"/>
+	<field name="ZPO" class="java.lang.Double"/>
+	<field name="ZPD" class="java.lang.Double"/>
+	<field name="SN" class="java.lang.Double"/>
+	<field name="PRR" class="java.lang.Double"/>
+	<field name="HZR" class="java.lang.Double"/>
+	<field name="PSS" class="java.lang.Double"/>
+	<field name="KMR" class="java.lang.Double"/>
+	<field name="NIZ1" class="java.lang.String"/>
+	<field name="NIZ2" class="java.lang.String"/>
+	<field name="SYR1" class="java.lang.String"/>
+	<field name="SYR2" class="java.lang.String"/>
+	<field name="OBR" class="java.lang.String"/>
+	<field name="USTO" class="java.lang.Double"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="numberPrice" class="java.lang.Integer"/>
+	<variable name="zam" class="java.lang.String"/>
+	<variable name="number" class="java.lang.String"/>
+	<variable name="date" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="55f15133-d0c9-499b-bdb3-3520a14961c4"/>
+				<textElement textAlignment="Right" markup="none">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Утверждаю:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="133" y="76" width="98" height="25" uuid="df420a1a-e261-456c-90ea-eca00b04ab63"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<textElement markup="none">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Прейскурант №"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="76" width="70" height="25" uuid="93b81664-baeb-41c5-ad5b-9cb8d912c53c"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="311" y="76" width="15" height="25" uuid="268ea712-0382-4372-97f0-6e54c1b5fa26"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[от]]></text>
+			</staticText>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement x="331" y="76" width="100" height="26" uuid="e72b0b90-1b5c-4834-8ecf-4c85dd2ed027"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="20" width="266" height="20" uuid="236db879-d6ab-4f30-a097-dc8ef7bfc9c1"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{director_post}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="40" width="266" height="20" uuid="421c5b51-9368-446e-97e3-1853db083189"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{director}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="10" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="39" y="70" width="114" height="20" uuid="3200c271-ae4e-4110-a308-e723f4b4711e"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="70" width="89" height="20" uuid="8eab0d1c-163f-4ef0-a11f-87c93ddc822b"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="70" width="69" height="20" uuid="457c7848-e22f-4a1a-82a6-61a44cb1f81c"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="117" height="70" uuid="457c7848-e22f-4a1a-82a6-61a44cb1f81c"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Цена реализации без НДС]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="70" width="59" height="20" uuid="724e7e45-a848-41d5-ba78-72f05f883e88"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="70" width="58" height="20" uuid="3200c271-ae4e-4110-a308-e723f4b4711e"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="0" width="114" height="70" uuid="3200c271-ae4e-4110-a308-e723f4b4711e"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Наименование изделия]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="59" height="70" uuid="724e7e45-a848-41d5-ba78-72f05f883e88"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Единица измерения]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="0" width="69" height="70" uuid="457c7848-e22f-4a1a-82a6-61a44cb1f81c"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Модель рисунок]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="89" height="70" uuid="8eab0d1c-163f-4ef0-a11f-87c93ddc822b"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Артикул]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="70" width="59" height="20" uuid="8eab0d1c-163f-4ef0-a11f-87c93ddc822b"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="0" width="59" height="70" uuid="8eab0d1c-163f-4ef0-a11f-87c93ddc822b"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Ставка НДС , %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="50" width="58" height="20" uuid="81724c92-381f-4e71-8503-d85fcdddae59"/>
+				<box topPadding="2" leftPadding="4" bottomPadding="2" rightPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[1 сорт]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="50" width="59" height="20" uuid="25f0509f-b794-4139-883d-2d5408b6333d"/>
+				<box topPadding="2" leftPadding="4" bottomPadding="2" rightPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[2 сорт]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="428" y="70" width="59" height="20" uuid="8eab0d1c-163f-4ef0-a11f-87c93ddc822b"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[6]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<elementGroup>
+				<rectangle>
+					<reportElement stretchType="RelativeToBandHeight" x="153" y="0" width="69" height="20" uuid="03bf8426-8ca9-4baa-a5bd-ce074fae38ce"/>
+				</rectangle>
+			</elementGroup>
+			<elementGroup>
+				<rectangle>
+					<reportElement stretchType="RelativeToBandHeight" x="311" y="0" width="59" height="20" uuid="8abf813e-5758-4c40-9005-37a180ef55d5"/>
+				</rectangle>
+			</elementGroup>
+			<elementGroup>
+				<rectangle>
+					<reportElement stretchType="RelativeToBandHeight" x="370" y="0" width="58" height="20" uuid="d479ebd2-72d0-4fd3-99c3-025c9d207b28"/>
+				</rectangle>
+			</elementGroup>
+			<elementGroup/>
+			<elementGroup>
+				<rectangle>
+					<reportElement stretchType="RelativeToBandHeight" x="487" y="0" width="59" height="20" uuid="8a50ef48-3295-4051-b2b3-85a1c48fc50d"/>
+				</rectangle>
+			</elementGroup>
+			<rectangle>
+				<reportElement stretchType="RelativeToBandHeight" x="222" y="0" width="89" height="20" uuid="9b7fce49-1449-48dd-850b-d4ec2f173a2c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="311" y="0" width="59" height="20" uuid="5ce281fe-2b33-4fa4-9f49-5f8e1f3a89e3"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{SYR1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement x="487" y="0" width="59" height="20" uuid="6746ffcb-0088-4179-9e23-1e5b3a892a59"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CNVP}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="153" y="0" width="69" height="20" uuid="91d596e0-f63b-4654-a383-d5f8ffd661ff"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{FAS}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement stretchType="RelativeToBandHeight" x="39" y="0" width="114" height="20" uuid="64b2f1ac-305e-4c18-bd7c-23c256b166a6"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="39" y="0" width="114" height="20" uuid="ac7d14bf-f828-4789-86d5-8fc380fefc1f"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{NIZ}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="###0">
+				<reportElement x="370" y="0" width="58" height="20" uuid="395602d8-df2e-4252-87c8-5d310bd31017"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="1" width="89" height="19" uuid="dfb58124-1bda-4cbf-9ccf-dcad44c1d31b"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{NAR}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement stretchType="RelativeToBandHeight" x="428" y="0" width="59" height="20" uuid="0dacaa37-9ba0-4f4a-81b3-d20a2968aa8d"/>
+			</rectangle>
+			<textField>
+				<reportElement x="428" y="0" width="59" height="20" uuid="ba77a59d-bef7-4a7f-994c-62fd5be35698"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{empty}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="446" y="0" width="100" height="20" uuid="ac7b58c6-87ff-43eb-baf7-ff967a182564"/>
+				<textFieldExpression><![CDATA[$P{empty}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="136" splitType="Stretch">
+			<textField>
+				<reportElement x="370" y="57" width="176" height="20" uuid="8f0315f8-e689-4bb1-844c-59b0866ed8a0"/>
+				<textElement markup="none">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{zam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="39" y="57" width="292" height="20" uuid="6743f234-bf64-4709-868d-119514177a81"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{zam_post}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

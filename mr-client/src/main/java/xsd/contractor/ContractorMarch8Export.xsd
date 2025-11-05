@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="ContractorXML">
+        <xs:annotation>
+            <xs:appinfo>
+                Контрагент XML
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ContractorList" type="ContractorMarch8" maxOccurs="5000">
+                    <xs:annotation>
+                        <xs:appinfo>
+                            Список контрагентов
+                        </xs:appinfo>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ContractorMarch8">
+        <xs:sequence>
+            <xs:element name="ID">
+                <xs:annotation>
+                    <xs:documentation>SQL идентификатор</xs:documentation>
+                    <xs:appinfo>SQL идентификатор</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="18"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Code">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор(код) контрагента</xs:documentation>
+                    <xs:appinfo>Идентификатор(код) контрагента</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="4"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Name">
+                <xs:annotation>
+                    <xs:documentation>Наименование контрагента</xs:documentation>
+                    <xs:appinfo>Наименование контрагента</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="FullName">
+                <xs:annotation>
+                    <xs:documentation>Полное наименование контрагента</xs:documentation>
+                    <xs:appinfo>Полное наименование контрагента</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Resident">
+                <xs:annotation>
+                    <xs:documentation>Признак резидента</xs:documentation>
+                    <xs:appinfo>Признак резидента</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:boolean">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Type">
+                <xs:annotation>
+                    <xs:documentation>Тип контрагента</xs:documentation>
+                    <xs:appinfo>Тип контрагента</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="1"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Region">
+                <xs:annotation>
+                    <xs:documentation>Географический регион</xs:documentation>
+                    <xs:appinfo>Географический регион</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="5"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="UNN">
+                <xs:annotation>
+                    <xs:documentation>УНН контрагента</xs:documentation>
+                    <xs:appinfo>УНН контрагента</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="15"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DiscountValue">
+                <xs:annotation>
+                    <xs:documentation>Размер скидки по контрагенту</xs:documentation>
+                    <xs:appinfo>Размер скидки по контрагенту</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:totalDigits value="18"/>
+                        <xs:fractionDigits value="5"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ContractList" type="ContractMarch8" maxOccurs="5000">
+                <xs:annotation>
+                    <xs:appinfo>
+                        Доступные договора по контрагенту
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="LegalAddress" type="AddressMarch8">
+                <xs:annotation>
+                    <xs:appinfo>
+                        Юридический адрес
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="PostAddress" type="AddressMarch8">
+                <xs:annotation>
+                    <xs:appinfo>
+                        Почтовый адрес
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="AddressList" type="AddressMarch8" maxOccurs="5000">
+                <xs:annotation>
+                    <xs:appinfo>
+                        Доступные адреса по контрагенту
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="EmailList" type="EmailMarch8" maxOccurs="5000">
+                <xs:annotation>
+                    <xs:appinfo>
+                        Доступные адреса по контрагенту
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ContractMarch8">
+        <xs:sequence>
+            <xs:element name="ID">
+                <xs:annotation>
+                    <xs:documentation>SQL идентификатор</xs:documentation>
+                    <xs:appinfo>SQL идентификатор</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="18"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Name">
+                <xs:annotation>
+                    <xs:documentation>Наименование договора</xs:documentation>
+                    <xs:appinfo>Наименование договора</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Number">
+                <xs:annotation>
+                    <xs:documentation>Номер договора</xs:documentation>
+                    <xs:appinfo>Номер договора</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DateBegin">
+                <xs:annotation>
+                    <xs:documentation>Дата договора</xs:documentation>
+                    <xs:appinfo>Дата договора</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:date">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DateEnd">
+                <xs:annotation>
+                    <xs:documentation>Дата окончания действия договора</xs:documentation>
+                    <xs:appinfo>Дата окончания действия договора</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:date">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="AddressMarch8">
+        <xs:sequence>
+            <xs:element name="ID">
+                <xs:annotation>
+                    <xs:documentation>SQL идентификатор</xs:documentation>
+                    <xs:appinfo>SQL идентификатор</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="18"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="FullName">
+                <xs:annotation>
+                    <xs:documentation>Полное наименование</xs:documentation>
+                    <xs:appinfo>Полное наименование</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Index">
+                <xs:annotation>
+                    <xs:documentation>Почтовый индекс</xs:documentation>
+                    <xs:appinfo>Почтовый индекс</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Region">
+                <xs:annotation>
+                    <xs:documentation>Область</xs:documentation>
+                    <xs:appinfo>Область</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="District">
+                <xs:annotation>
+                    <xs:documentation>Район</xs:documentation>
+                    <xs:appinfo>Район</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="City">
+                <xs:annotation>
+                    <xs:documentation>Город</xs:documentation>
+                    <xs:appinfo>Город</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Street">
+                <xs:annotation>
+                    <xs:documentation>Улица</xs:documentation>
+                    <xs:appinfo>Улица</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="HomeNumber">
+                <xs:annotation>
+                    <xs:documentation>Номер дома</xs:documentation>
+                    <xs:appinfo>Номер дома</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EmailMarch8">
+        <xs:sequence>
+            <xs:element name="ID">
+                <xs:annotation>
+                    <xs:documentation>SQL идентификатор</xs:documentation>
+                    <xs:appinfo>SQL идентификатор</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="18"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Name">
+                <xs:annotation>
+                    <xs:documentation>Наименование</xs:documentation>
+                    <xs:appinfo>Наименование</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="255"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

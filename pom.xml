@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>by.march8</groupId>
+    <artifactId>MyReportsComplex</artifactId>
+    <version>1.0</version>
+
+    <modules>
+        <module>mr-common</module>
+        <module>mr-entities</module>
+        <module>mr-client</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.deploy.dir>../!out</project.deploy.dir>
+        <src.dir>${project.build.sourceDirectory}</src.dir>
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <maven.build.timestamp.format>dd.MM.yyyy (HH:mm)</maven.build.timestamp.format>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.number>3</project.build.number>
+    </properties>
+
+    <!--Репозиторий Maven(Sonatype Nexus) для зависимостей, которых нет на официальном репозиториии-->
+    <repositories>
+        <repository>
+            <id>March8</id>
+            <url>http://192.168.254.115:8081/nexus/content/repositories/March8/</url>
+        </repository>
+    </repositories>
+    <build>
+    </build>
+</project>

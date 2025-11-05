@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="ModelImageList">
+        <xs:annotation>
+            <xs:appinfo>
+                Каталог изображений XML
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ModelImageItems" type="ModelImageItem" minOccurs="0" maxOccurs="5000">
+                    <xs:annotation>
+                        <xs:appinfo>
+                            Список моделей с изображениями
+                        </xs:appinfo>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ModelImageItem">
+        <xs:sequence>
+            <xs:element name="ImageFileDefault">
+                <xs:annotation>
+                    <xs:documentation>Изображение по-умолчанию</xs:documentation>
+                    <xs:appinfo>Изображение по-умолчанию</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="1024"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="SourceFileDefault">
+                <xs:annotation>
+                    <xs:documentation>Оригинальное изображение по-умолчанию</xs:documentation>
+                    <xs:appinfo>Оригинальное изображение по-умолчанию</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="1024"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="DefaultImageSizeList" type="SizeListItem" minOccurs="0" maxOccurs="5000">
+                <xs:annotation>
+                    <xs:documentation>Доступные размеры для картинки по-умолчанию</xs:documentation>
+                    <xs:appinfo>Доступные размеры для картинки по-умолчанию</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ColorList" type="ColorListItem" minOccurs="0" maxOccurs="5000">
+                <xs:annotation>
+                    <xs:documentation>Доступные цвета для модели</xs:documentation>
+                    <xs:appinfo>Доступные цвета для модели</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="ModelNumber" use="required" type="xs:string"/>
+        <xs:attribute name="ImageWidth" use="required" type="xs:int"/>
+        <xs:attribute name="ImageHeight" use="required" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="ColorListItem">
+        <xs:sequence>
+            <xs:element name="ImageList" type="ImageListItem" minOccurs="0" maxOccurs="5000">
+                <xs:annotation>
+                    <xs:documentation>Доступные изображения для цвета у модели</xs:documentation>
+                    <xs:appinfo>Доступные изображения для цвета у модели</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="Color" use="required" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="ImageListItem">
+        <xs:sequence>
+            <xs:element name="ImageFile">
+                <xs:annotation>
+                    <xs:documentation>Имя файла</xs:documentation>
+                    <xs:appinfo>Имя файла</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="1024"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="SourceFile">
+                <xs:annotation>
+                    <xs:documentation>Имя файла-источника</xs:documentation>
+                    <xs:appinfo>Имя файла-источника</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="1024"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="SizeList" type="SizeListItem" minOccurs="0" maxOccurs="5000">
+                <xs:annotation>
+                    <xs:documentation>Доступные изображения в определенном размере для цвета у модели</xs:documentation>
+                    <xs:appinfo>Доступные изображения в определенном размере для цвета у модели</xs:appinfo>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="ImageWidth" use="required" type="xs:int"/>
+        <xs:attribute name="ImageHeight" use="required" type="xs:int"/>
+    </xs:complexType>
+    <xs:complexType name="SizeListItem">
+        <xs:sequence>
+            <xs:element name="ImageFile">
+                <xs:annotation>
+                    <xs:documentation>Имя файла</xs:documentation>
+                    <xs:appinfo>Имя файла</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="1024"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="SourceFile">
+                <xs:annotation>
+                    <xs:documentation>Имя файла-источника</xs:documentation>
+                    <xs:appinfo>Имя файла-источника</xs:appinfo>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="1024"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="Size" use="required" type="xs:int"/>
+        <xs:attribute name="ImageWidth" use="required" type="xs:int"/>
+        <xs:attribute name="ImageHeight" use="required" type="xs:int"/>
+    </xs:complexType>
+</xs:schema>

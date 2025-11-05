@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="testElement">
+        <xs:annotation>
+            <xs:appinfo>
+                Тестовый модуль
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MessageID">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер сообщения, который присваивается отправителем
+                        </xs:documentation>
+                        <xs:appinfo>Уникальный номер сообщения</xs:appinfo>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="0"/>
+                            <xs:maxLength value="14"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="MsgDateTime">
+                    <xs:annotation>
+                        <xs:documentation>Дата и время создания сообщения</xs:documentation>
+                        <xs:appinfo>Дата и время создания сообщения</xs:appinfo>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="35"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="MessageType">
+                    <xs:annotation>
+                        <xs:documentation>Тип сообщения</xs:documentation>
+                        <xs:appinfo>Тип сообщения</xs:appinfo>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="6"/>
+                            <xs:enumeration value="BLRDLN"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="MsgSenderID">
+                    <xs:annotation>
+                        <xs:documentation>GLN номер отправителя сообщения</xs:documentation>
+                        <xs:appinfo>GLN номер отправителя</xs:appinfo>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="13"/>
+                            <xs:minLength value="1"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="MsgReceiverID">
+                    <xs:annotation>
+                        <xs:documentation>GLN номер получателя сообщения</xs:documentation>
+                        <xs:appinfo>GLN номер получателя</xs:appinfo>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="13"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="TestIndicator" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Индикатор тестового сообщения:
+                            1 = Тестовое сообщение
+                        </xs:documentation>
+                        <xs:appinfo>Индикатор тестового сообщения</xs:appinfo>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="1"/>
+                            <xs:enumeration value="1"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="UserID" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор пользователя, который будет подписывать сообщение
+                        </xs:documentation>
+                        <xs:appinfo>Идентификатор пользователя, который будет подписывать сообщение</xs:appinfo>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="35"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>    
