@@ -22,3 +22,12 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+## Project exclude paths
+/mr-client/target/
+/mr-entities/target/
+/mr-common/target/
+/mr-common-config/target/
+/!out/
+/.idea/
+/lib/mr-entities-1.0.jar
