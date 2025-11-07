@@ -31,3 +31,4 @@ replay_pid*
 /!out/
 /.idea/
 /lib/mr-entities-1.0.jar
+*.iml
