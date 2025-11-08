@@ -1,0 +1,16 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Oct 22 09:05:10 MSK 2025
+http\://jasperreports.sourceforge.net/maven2/.lastUpdated=1674556210422
+https\://maven.repository.redhat.com/techpreview/all/.lastUpdated=1761049272533
+http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/.lastUpdated=1674481665782
+@default-disable-http-blocker-http\://0.0.0.0/.lastUpdated=1761050205103
+@default-March8-https\://192.168.254.115\:8081/nexus/content/repositories/March8/.lastUpdated=1761049276528
+http\://192.168.254.115\:8081/nexus/content/repositories/March8/.lastUpdated=1674556209255
+http\://0.0.0.0/.error=Could not transfer artifact com.lowagie\:itext\:pom\:2.1.7.js2 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [jboss-ga-repository (http\://maven.repository.redhat.com/techpreview/all, default, releases), March8 (http\://192.168.254.115\:8081/nexus/content/repositories/March8/, default, releases+snapshots), jasperreports (http\://jasperreports.sourceforge.net/maven2, default, releases+snapshots), jaspersoft-third-party (http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/, default, releases+snapshots)]
+https\://192.168.254.115\:8081/nexus/content/repositories/March8/.error=Could not transfer artifact com.lowagie\:itext\:pom\:2.1.7.js2 from/to March8 (https\://192.168.254.115\:8081/nexus/content/repositories/March8/)\: transfer failed for https\://192.168.254.115\:8081/nexus/content/repositories/March8/com/lowagie/itext/2.1.7.js2/itext-2.1.7.js2.pom
+http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/.error=
+https\://maven.repository.redhat.com/techpreview/all/.error=
+http\://192.168.254.115\:8081/nexus/content/repositories/March8/.error=
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1761113110034
+https\://repo.maven.apache.org/maven2/.lastUpdated=1761111032443
+https\://repo.maven.apache.org/maven2/.error=

@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Jun 05 14:41:21 MSK 2025
+http\://0.0.0.0/.error=Could not transfer artifact fakepath\:curupdater\:jar\:sources\:1 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [maven-default-http-blocker (http\://0.0.0.0/, default, releases+snapshots)]
+https\://repo.maven.apache.org/maven2/.lastUpdated=1749123681316
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1749123681050
+https\://repo.maven.apache.org/maven2/.error=

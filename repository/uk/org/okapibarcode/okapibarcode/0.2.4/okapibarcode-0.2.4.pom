@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>uk.org.okapibarcode</groupId>
+  <artifactId>okapibarcode</artifactId>
+  <version>0.2.4</version>
+  <name>Okapi Barcode</name>
+  <description>Okapi Barcode is an open-source barcode generator written entirely in Java, supporting over 50 encoding standards including all ISO standards.</description>
+  <url>https://github.com/woo-j/OkapiBarcode</url>
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>woo-j</id>
+      <name>Robin Stuart</name>
+    </developer>
+    <developer>
+      <id>gredler</id>
+      <name>Daniel Gredler</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/woo-j/OkapiBarcode.git</connection>
+    <url>https://github.com/woo-j/OkapiBarcode</url>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>com.beust</groupId>
+      <artifactId>jcommander</artifactId>
+      <version>1.48</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>javase</artifactId>
+      <version>3.3.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.reflections</groupId>
+      <artifactId>reflections</artifactId>
+      <version>0.9.10</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

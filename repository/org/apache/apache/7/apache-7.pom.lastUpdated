@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Nov 08 22:26:18 MSK 2025
+http\://0.0.0.0/.error=Could not transfer artifact org.apache\:apache\:pom\:7 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [March8 (http\://192.168.254.115\:8081/nexus/content/repositories/March8/, default, releases+snapshots), jasperreports (http\://jasperreports.sourceforge.net/maven2, default, releases+snapshots), jaspersoft-third-party (http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/, default, releases+snapshots)]
+https\://repo.maven.apache.org/maven2/.lastUpdated=1762629978168
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1762629978007

@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Oct 21 16:15:03 MSK 2025
+http\://192.168.254.115\:8081/nexus/content/repositories/March8/.lastUpdated=1674481621709
+http\://0.0.0.0/.error=Could not transfer artifact ole.jawin\:jawin\:pom\:1.0 from/to maven-default-http-blocker (http\://0.0.0.0/)\: transfer failed for http\://0.0.0.0/ole/jawin/jawin/1.0/jawin-1.0.pom
+https\://repo.maven.apache.org/maven2/.lastUpdated=1761036029015
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1761052503820
+@default-disable-http-blocker-http\://0.0.0.0/.lastUpdated=1761050180418
+https\://repo.maven.apache.org/maven2/.error=

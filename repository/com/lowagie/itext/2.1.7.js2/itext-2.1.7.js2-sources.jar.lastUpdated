@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Jun 05 14:41:12 MSK 2025
+http\://0.0.0.0/.error=Could not transfer artifact com.lowagie\:itext\:jar\:sources\:2.1.7.js2 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [maven-default-http-blocker (http\://0.0.0.0/, default, releases+snapshots)]
+https\://repo.maven.apache.org/maven2/.lastUpdated=1749123672309
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1749123672043
+https\://repo.maven.apache.org/maven2/.error=

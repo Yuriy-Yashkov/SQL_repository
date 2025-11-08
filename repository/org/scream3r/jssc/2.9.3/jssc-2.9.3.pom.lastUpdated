@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu May 08 15:08:27 MSK 2025
+https\://192.168.254.115\:8081/nexus/content/repositories/March8/.error=Could not transfer artifact org.scream3r\:jssc\:pom\:2.9.3 from/to March8 (https\://192.168.254.115\:8081/nexus/content/repositories/March8/)\: Unsupported or unrecognized SSL message
+http\://0.0.0.0/.error=Could not transfer artifact org.scream3r\:jssc\:pom\:2.9.3 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [jboss-ga-repository (http\://maven.repository.redhat.com/techpreview/all, default, releases)]
+https\://repo.maven.apache.org/maven2/.lastUpdated=1746706107650
+@default-March8-https\://192.168.254.115\:8081/nexus/content/repositories/March8/.lastUpdated=1746706107351
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1746706107319
+https\://repo.maven.apache.org/maven2/.error=

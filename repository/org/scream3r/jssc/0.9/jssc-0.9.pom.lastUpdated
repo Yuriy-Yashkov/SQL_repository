@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Oct 22 09:01:35 MSK 2025
+http\://192.168.254.115\:8081/nexus/content/repositories/March8/.lastUpdated=1674481622992
+http\://0.0.0.0/.error=Could not transfer artifact org.scream3r\:jssc\:pom\:0.9 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [jboss-ga-repository (http\://maven.repository.redhat.com/techpreview/all, default, releases), March8 (http\://192.168.254.115\:8081/nexus/content/repositories/March8/, default, releases+snapshots)]
+https\://repo.maven.apache.org/maven2/.lastUpdated=1761111031638
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1761112895164
+@default-disable-http-blocker-http\://0.0.0.0/.lastUpdated=1761050200928
+https\://repo.maven.apache.org/maven2/.error=

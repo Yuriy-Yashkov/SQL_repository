@@ -1,0 +1,18 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Oct 22 09:09:18 MSK 2025
+http\://jasperreports.sourceforge.net/maven2/.lastUpdated=1600065087401
+https\://maven.repository.redhat.com/techpreview/all/.lastUpdated=1761049272668
+http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/.lastUpdated=1600065087924
+@default-disable-http-blocker-http\://0.0.0.0/.lastUpdated=1761050207235
+@default-March8-https\://192.168.254.115\:8081/nexus/content/repositories/March8/.lastUpdated=1761049276592
+http\://192.168.254.115\:8081/nexus/content/repositories/March8/.lastUpdated=1600065086913
+http\://0.0.0.0/.error=Could not transfer artifact org.olap4j\:olap4j\:pom\:0.9.7.309-JS-3 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [jboss-ga-repository (http\://maven.repository.redhat.com/techpreview/all, default, releases), March8 (http\://192.168.254.115\:8081/nexus/content/repositories/March8/, default, releases+snapshots), jasperreports (http\://jasperreports.sourceforge.net/maven2, default, releases+snapshots), jaspersoft-third-party (http\://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/, default, releases+snapshots)]
+http\://maven.repository.redhat.com/techpreview/all/.lastUpdated=1600065086868
+https\://192.168.254.115\:8081/nexus/content/repositories/March8/.error=Could not transfer artifact org.olap4j\:olap4j\:pom\:0.9.7.309-JS-3 from/to March8 (https\://192.168.254.115\:8081/nexus/content/repositories/March8/)\: transfer failed for https\://192.168.254.115\:8081/nexus/content/repositories/March8/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.pom
+https\://maven.repository.redhat.com/techpreview/all/.error=
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1761113358847
+http\://192.168.254.115\:8081/nexus/content/repositories/March8/.error=
+http\://maven.repository.redhat.com/techpreview/all/.error=
+https\://repo.maven.apache.org/maven2/.lastUpdated=1761111032942
+https\://repo.maven.apache.org/maven2/.error=
+http\://jasperreports.sourceforge.net/maven2/.error=

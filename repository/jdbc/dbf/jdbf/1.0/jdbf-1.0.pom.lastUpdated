@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Oct 21 16:44:36 MSK 2025
+http\://192.168.254.115\:8081/nexus/content/repositories/March8/.lastUpdated=1674481621891
+http\://0.0.0.0/.error=Could not transfer artifact jdbc.dbf\:jdbf\:pom\:1.0 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [jboss-ga-repository (http\://maven.repository.redhat.com/techpreview/all, default, releases), March8 (http\://192.168.254.115\:8081/nexus/content/repositories/March8/, default, releases+snapshots)]
+https\://repo.maven.apache.org/maven2/.lastUpdated=1761036029592
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1761054276558
+@default-disable-http-blocker-http\://0.0.0.0/.lastUpdated=1761050184512
+https\://repo.maven.apache.org/maven2/.error=

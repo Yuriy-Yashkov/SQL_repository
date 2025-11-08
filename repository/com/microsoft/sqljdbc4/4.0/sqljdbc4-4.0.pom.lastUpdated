@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Oct 21 15:41:03 MSK 2025
+http\://192.168.254.115\:8081/nexus/content/repositories/March8/.lastUpdated=1674481621545
+http\://0.0.0.0/.error=Could not transfer artifact com.microsoft\:sqljdbc4\:pom\:4.0 from/to maven-default-http-blocker (http\://0.0.0.0/)\: transfer failed for http\://0.0.0.0/com/microsoft/sqljdbc4/4.0/sqljdbc4-4.0.pom
+https\://repo.maven.apache.org/maven2/.lastUpdated=1761036028694
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1761050463346
+@default-disable-http-blocker-http\://0.0.0.0/.lastUpdated=1761050178372
+https\://repo.maven.apache.org/maven2/.error=

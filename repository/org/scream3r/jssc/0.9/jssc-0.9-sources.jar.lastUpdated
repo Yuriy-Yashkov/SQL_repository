@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Jun 05 14:40:58 MSK 2025
+http\://0.0.0.0/.error=Could not transfer artifact org.scream3r\:jssc\:jar\:sources\:0.9 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [maven-default-http-blocker (http\://0.0.0.0/, default, releases+snapshots)]
+https\://repo.maven.apache.org/maven2/.lastUpdated=1749123658166
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1749123657902
+https\://repo.maven.apache.org/maven2/.error=
