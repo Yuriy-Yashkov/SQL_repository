@@ -18,7 +18,6 @@ import by.march8.ecs.application.modules.MainModuleController;
 import by.march8.ecs.application.shell.general.events.EventInternalFrame;
 import by.march8.ecs.application.shell.general.events.HintActivateMouseListener;
 import by.march8.ecs.application.shell.general.events.IFrameButtonActionListener;
-import by.march8.ecs.application.shell.general.uicontrol.GeneralMenuBar;
 import by.march8.ecs.application.shell.general.uicontrol.IFrameListPane;
 import by.march8.ecs.application.shell.general.uicontrol.LoginForm;
 import by.march8.ecs.application.shell.general.uicontrol.MainForm;
@@ -198,7 +197,7 @@ public class MainController implements ApplicationController {
             System.out.println("Выполнен автоматический вход в программу...[" + uName + "]");
             initialisation();
         } else {
-            if (loginProcessing()) {
+            if (loginProcessing()) { // Здесь именно ввод логина и пароля в окошко при старте!
                 initialisation();
                 //postInit();
             } else {
@@ -768,5 +767,4 @@ public class MainController implements ApplicationController {
             MainController.exception(e, "Ошибка инициализации меню");
         }
     }
-
 }

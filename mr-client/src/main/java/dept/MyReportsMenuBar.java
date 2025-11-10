@@ -68,6 +68,7 @@ import java.util.TreeMap;
 
 /**
  * Created by Andy on 18.09.2015.
+ * Главное меню + все вкладки.
  */
 
 public class MyReportsMenuBar extends JMenuBar {
@@ -444,6 +445,7 @@ public class MyReportsMenuBar extends JMenuBar {
         add(MENU_TECH);
         add(MENU_ECONOMIST);
         add(MENU_SETTINGS);
+        MENU_NSI.add(new JMenuItem("Yra"));
 //        createWESMenu();
 //        createLabelMenu();
 //        createMarketingMenu();
