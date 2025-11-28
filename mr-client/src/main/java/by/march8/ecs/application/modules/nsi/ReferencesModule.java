@@ -9,11 +9,13 @@ import dept.nsi.ClientKT;
 import dept.nsi.Otgruz;
 import dept.nsi.PlanSstoimost;
 import dept.nsi.TrudoZat;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import java.io.File;
 
+@Slf4j
 public class ReferencesModule implements Module {
 
     private final JMenu miReferenceMenu = new JMenu("Справочники");
@@ -30,6 +32,7 @@ public class ReferencesModule implements Module {
 
     @Override
     public void registerModule(MainController mainController) {
+        log.info("Регистрация справочников в модуле НСИ");
         controller = mainController;
         ownerFrame = controller.getMainForm();
         registerMenu();
@@ -150,6 +153,7 @@ public class ReferencesModule implements Module {
                     }
                     return false;
                 }
+
                 @Override
                 public String getDescription() {
                     return "*.dbf";
@@ -166,6 +170,7 @@ public class ReferencesModule implements Module {
                         c.update();
                         return null;
                     }
+
                     @Override
                     protected void done() {
                         pb.dispose();
