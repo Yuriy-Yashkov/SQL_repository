@@ -15,7 +15,6 @@ import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Map;
 import java.util.Properties;
-import java.util.TreeMap;
 import java.util.logging.Level;
 
 public class MyReportsModule {
@@ -87,9 +86,9 @@ public class MyReportsModule {
             if (!configfile.exists()) {
                 prop.setProperty("programm.path", "/nfs/Programs/MyReports20");
                 prop.setProperty("programm.login", "");
-                prop.setProperty("db.conn.url", "mssql-server");
-                prop.setProperty("db.conn.user", "March8");
-                prop.setProperty("db.conn.password", "");
+                prop.setProperty("db.conn.url", "jdbc:sqlserver://localhost:1435;database=global");
+                prop.setProperty("db.conn.user", "sa");
+                prop.setProperty("db.conn.password", "YourPassword123!");
                 prop.setProperty("dbpostgres.conn.url", "postgres-server");
                 prop.setProperty("dbpostgres.conn.user", "client");
                 prop.setProperty("dbpostgres.conn.password", "march8");

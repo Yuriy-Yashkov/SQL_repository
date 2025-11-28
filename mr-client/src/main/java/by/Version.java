@@ -1,4 +1,4 @@
 package by;
 public final class Version {
-     public static String VERSION="04.09.2025 (12:22)";
+     public static String VERSION="09.11.2025 (00:22)";
 }

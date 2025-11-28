@@ -169,12 +169,12 @@ public class Configuration {
     private void defaultConfiguration() {
         properties.setProperty("programm.path", "/nfs/Programs/MyReports20");
         properties.setProperty("programm.login", "");
-        properties.setProperty("db.conn.url", "mssql-server");
-        properties.setProperty("db.conn.user", "March8");
-        properties.setProperty("db.conn.password", "");
-        properties.setProperty("dbpostgres.conn.url", "postgres-server");
-        properties.setProperty("dbpostgres.conn.user", "client");
-        properties.setProperty("dbpostgres.conn.password", "march8");
+        properties.setProperty("db.conn.url", "jdbc:sqlserver://localhost:1433;database=gomel");
+        properties.setProperty("db.conn.user", "sa");
+        properties.setProperty("db.conn.password", "YourPassword123!");
+        properties.setProperty("dbpostgres.conn.url", "jdbc:postgresql://localhost:5432/march");
+        properties.setProperty("dbpostgres.conn.user", "postgres");
+        properties.setProperty("dbpostgres.conn.password", "postgres");
         properties.setProperty("dbf.plan", "/nfs/ser01_D/PLAN/");
         properties.setProperty("dbf.DVI", "/nfs/ser01_D/DVI/");
         saveConfiguration();
