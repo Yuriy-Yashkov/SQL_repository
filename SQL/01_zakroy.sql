@@ -11,6 +11,7 @@ SELECT nsi_kld.nar                                 'Артикул',
        rasx_osn.rst                                'Рост',
        rasx_osn.kol                                'Кол-во',
        rasx_osn.brig_otpr                          'Бригада',
+       marh_list.brigadir                          'Бригадир',
        rasx_osn.kod_marh                           'Код листа',
        CONVERT(varchar(10), rasx_osn.data, 104) AS 'Дата пошива'
 FROM Gomel.dbo.nsi_kld nsi_kld
@@ -19,6 +20,7 @@ FROM Gomel.dbo.nsi_kld nsi_kld
               ON nsi_kld.kod = poshiv.kod_izd
          JOIN Gomel.dbo.rasx_osn AS rasx_osn
               ON nsi_kld.kod = rasx_osn.kod_izd
+         JOIN Gomel.dbo.marh_list marh_list ON rasx_osn.kod_marh = marh_list.kod
 WHERE rasx_osn.kod_marh = 602529
   AND rasx_osn.data >= '19-09-2025' -- именно такой способ
   AND rasx_osn.data < '20-09-2025'  -- функции не работают
