@@ -95,6 +95,7 @@ public class MyReportsMenuBar extends JMenuBar {
     private JMenu jMenu28;
     private JMenu jMenu29;
     private JMenu jMenu3;
+    private JMenuItem MyMenu;
     private JMenu jMenu30;
     private JMenu jMenu31;
     private JMenu jMenu32;
@@ -223,6 +224,8 @@ public class MyReportsMenuBar extends JMenuBar {
     public static final JMenu MENU_ART = new JMenu("ХЭО");
     public static final JMenu MENU_INNOVATIONS = new JMenu("Нововведения");
     private static final JMenu MENU_TECH = new JMenu("Тех отдел");
+    public static final JMenu MENU_CUT = new JMenu("Крой");
+
 
     private JMenuItem miRelogin = new JMenuItem("Сменить пользователя") ;
     private JMenuItem miExit = new JMenuItem("Выход") ;
@@ -253,6 +256,7 @@ public class MyReportsMenuBar extends JMenuBar {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        MyMenu = new JMenuItem("Привет!");
         jMenuItem1 = new JMenuItem();
         jMenuItem19 = new JMenuItem();
         jMenuItem77 = new JMenuItem();
@@ -426,6 +430,7 @@ public class MyReportsMenuBar extends JMenuBar {
         controller.addModuleMenu(new SectionMenu(MarchSection.OTK, MENU_OTK));
         controller.addModuleMenu(new SectionMenu(MarchSection.NSI, MENU_NSI));
         controller.addModuleMenu(new SectionMenu(MarchSection.WAREHOUSE, MENU_WAREHOUSE));
+        controller.addModuleMenu(new SectionMenu(MarchSection.CUT, MENU_CUT));
 
         add(MENU_FILE);
         createFileMenu();
@@ -445,7 +450,7 @@ public class MyReportsMenuBar extends JMenuBar {
         add(MENU_TECH);
         add(MENU_ECONOMIST);
         add(MENU_SETTINGS);
-        MENU_NSI.add(new JMenuItem("Yra"));
+        add(MENU_CUT);
 //        createWESMenu();
 //        createLabelMenu();
 //        createMarketingMenu();
@@ -1108,6 +1113,7 @@ public class MyReportsMenuBar extends JMenuBar {
 //    }
 //
     private void createHelpMenu() {
+        jMenu3.add(MyMenu);
         jMenu3.setText("Помощь");
 
         jMenuItem2.setText("О программе");
@@ -1149,8 +1155,8 @@ public class MyReportsMenuBar extends JMenuBar {
         });
         jMenu3.add(miSaleDept);
 
+// 3 - меню помощь, её 3-1..5 подменю
         add(jMenu3);
-
         treeMenu.put("3", jMenu3);
         treeMenu.put("3-1", jMenuItem2);
         treeMenu.put("3-2", miERPRemains);
@@ -1764,6 +1770,7 @@ public class MyReportsMenuBar extends JMenuBar {
         jMenuItem1.setVisible(false);
         //jMenuItem2.setVisible(false);
         jMenuItem3.setVisible(false);
+        MyMenu.setVisible(false);
         jMenuItem4.setVisible(false);
         jMenuItem5.setVisible(false);
         jMenuItem6.setVisible(false);

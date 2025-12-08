@@ -1,4 +1,4 @@
-package by.march8.ecs.application.modules.nsi.report;
+package by.march8.ecs.application.modules.cut.view;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;

@@ -19,8 +19,5 @@ public class NsiModuleSet implements ModuleSet {
 
         ReferencesModule referencesModule = new ReferencesModule(); // "Справочники" в меню -> "НСИ"
         referencesModule.registerModule(controller);
-
-        ReferencesModule.ReportsNsiModule reportsNsiModule = new ReferencesModule.ReportsNsiModule(); // Вкладка "Отчёты" в меню -> "НСИ"
-        reportsNsiModule.registerModule(controller);
     }
 }

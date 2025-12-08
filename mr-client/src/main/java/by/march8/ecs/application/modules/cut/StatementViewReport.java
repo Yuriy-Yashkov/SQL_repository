@@ -1,4 +1,4 @@
-package by.march8.ecs.application.modules.nsi.report;
+package by.march8.ecs.application.modules.cut;
 
 import javafx.collections.FXCollections;
 import javafx.scene.Parent;
@@ -6,7 +6,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.VBox;
 
-public class StatementViewReports {
+public class StatementViewReport {
 
     public Parent createContent() {
 

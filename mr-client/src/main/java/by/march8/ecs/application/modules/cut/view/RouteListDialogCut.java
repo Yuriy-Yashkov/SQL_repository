@@ -1,4 +1,4 @@
-package by.march8.ecs.application.modules.nsi.report;
+package by.march8.ecs.application.modules.cut.view;
 
 import javafx.scene.Parent;
 
@@ -8,7 +8,7 @@ import javax.swing.*;
  * Диалоговое окно для операции «Закройный цех» в модуле NSI Reports.
  * <p>
  * Класс является конкретной реализацией {@link BaseFxDialog} и
- * предоставляет JavaFX-контент, созданный через {@link RouteSheetsShopViewNsiReports}.
+ * предоставляет JavaFX-контент, созданный через {@link RouteListView}.
  * <p>
  * Диалог автоматически:
  * <ul>
@@ -18,15 +18,15 @@ import javax.swing.*;
  *     <li>подгоняет размеры окна посредством {@code pack()} (выполняется в базовом классе).</li>
  * </ul>
  */
-public class RouteSheetsDialogNsiReports extends BaseFxDialog {
+public class RouteListDialogCut extends BaseFxDialog {
 
-    public RouteSheetsDialogNsiReports(JFrame owner) {
+    public RouteListDialogCut(JFrame owner) {
         super(owner, "Маршрутные листы");
     }
 
     @Override
     protected Parent createContent() {
-        return new RouteSheetsShopViewNsiReports().createContent();
+        return new RouteListView().createContent();
     }
 
     @Override

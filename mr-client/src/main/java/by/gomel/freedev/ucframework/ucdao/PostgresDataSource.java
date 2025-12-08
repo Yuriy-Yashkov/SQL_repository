@@ -12,6 +12,8 @@ import javax.persistence.EntityManagerFactory;
 public class PostgresDataSource {
 
     private static final String PERSISTENT_UNIT_NAME = "march8arm-postgresql";
+//    private static final String PERSISTENT_UNIT_NAME = "jdbc:postgresql://postgres-server:5432/march";
+
     private static EntityManagerFactory emf;
 
     static {

@@ -9,7 +9,7 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://postgres-server:5432/march"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/march"/>
             <property name="javax.persistence.jdbc.user" value="postgres"/>
             <property name="javax.persistence.jdbc.password" value="postgres"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
